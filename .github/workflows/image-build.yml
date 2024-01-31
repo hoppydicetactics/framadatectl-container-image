@@ -15,7 +15,7 @@ jobs:
         id: build_image
         uses: redhat-actions/buildah-build@v2
         with:
-          image: framadatectl.
+          image: framadatectl
           tags: latest ${{ github.sha }}
           containerfiles: |
             ./Containerfile
