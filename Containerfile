@@ -4,8 +4,7 @@ LABEL maintainer="Benjamin Affolter"
 
 USER root
 
-RUN INSTALL_PKGS="python3-pip" && \
-    microdnf install --assumeyes --disablerepo=* --enablerepo=ubi-9-appstream-rpms --enablerepo=ubi-9-baseos-rpms --nodocs $INSTALL_PKGS && \
+RUN microdnf install --assumeyes --disablerepo=* --enablerepo=ubi-9-appstream-rpms --enablerepo=ubi-9-baseos-rpms --nodocs python3-pip && \
     microdnf clean all && \
     pip install framadatectl
 
