@@ -1,4 +1,4 @@
-name: Image publish
+name: Publish image
 on:
   push:
     branches:

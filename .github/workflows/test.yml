@@ -1,0 +1,22 @@
+name: Test image build
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+  
+      - name: Build image
+        id: build_image
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: framadatectl
+          tags: ${{ github.sha }}
+          containerfiles: |
+            ./Containerfile
