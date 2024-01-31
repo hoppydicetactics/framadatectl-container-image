@@ -1,6 +1,7 @@
 FROM registry.access.redhat.com/ubi9/ubi-minimal:9.3-1552
 
 LABEL maintainer="Benjamin Affolter"
+LABEL org.opencontainers.image.source="https://github.com/hoppydicetactics/framadatectl-container-image"
 
 USER root
 
